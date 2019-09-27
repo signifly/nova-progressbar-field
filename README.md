@@ -31,7 +31,7 @@ ___
 ## Installation
 Just run:  
 ```bash
-composer require Signifly/nova-progressbar-card
+composer require Signifly/nova-progressbar-field
 ```
 After this the setup will be complete and you can use the components listed here.
 
