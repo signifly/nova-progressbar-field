@@ -5,7 +5,13 @@
 
 This package allows you to add progressbar fields to your resources and dashboards in [Nova](https://nova.laravel.com).
 
-<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot.png" alt="Example">
+It basically takes a field with a decimal value between 0 and 1 and shows it as a percentage progress bar.
+
+It edits like a text field.
+
+<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot-index.png" alt="index example">
+<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot-detail.png" alt="detail example">
+<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot-form.png" alt="form example">
 
 #### DISCLAIMER: 
 This package is still work in progress. Feel free to help improve it.
@@ -29,10 +35,12 @@ composer require Signifly/nova-progressbar-card
 ```
 After this the setup will be complete and you can use the components listed here.
 
+
+
 ___
 ## Basic Usage
 ```php
-// in App\Nova\Product
+// in App\Nova\User
 ...
 use signifly\Nova\Fields\ProgressBar\ProgressBar;
 ...
@@ -46,7 +54,7 @@ use signifly\Nova\Fields\ProgressBar\ProgressBar;
 public function fields(Request $request)
 {
     return [
-        (new ProgressBar)->options(['title' => 'Translations', 'percentage' => 0.5]);
+        ProgressBar::make('Awesomeness'),
     ];
 }
 
@@ -60,11 +68,10 @@ ___
 public function cards(Request $request)
 {
     return [
-        (new ProgressBar)->options([
-            'title' => 'Translations',
-            'percentage' => 0.5,
-            'color' => '#123456',
-        ]);
+        ProgressBar::make('Awesomeness')
+            ->options([
+                'color' => '#FFEA82',
+            ]),
     ];
 }
 ```
@@ -74,41 +81,12 @@ public function cards(Request $request)
 public function cards(Request $request)
 {
     return [
-        (new ProgressBar)->options([
-            'title' => 'Translations',
-            'percentage' => 0.5,
-            'colorFrom' => '#aaa',
-            'colorTo' => '#bbb',
-            'animateColor' => true,
-        ]);
-    ];
-}
-```
-
-### Stroke Width
-```php
-public function cards(Request $request)
-{
-    return [
-        (new ProgressBar)->options([
-            'title' => 'Translations',
-            'percentage' => 0.5,
-            'strokeWidth' => 8,
-        ]);
-    ];
-}
-```
-
-### Semi Circle Type Progress Bar
-```php
-public function cards(Request $request)
-{
-    return [
-        (new ProgressBar)->options([
-            'title' => 'Translations',
-            'percentage' => 0.5,
-            'type' => 'semi-circle',
-        ]);
+        ProgressBar::make('Awesomeness')
+            ->options([
+                'fromColor' => '#FFEA82',
+                'toColor' => '#40BF55',
+                'animateColor' => true,
+            ]),
     ];
 }
 ```
