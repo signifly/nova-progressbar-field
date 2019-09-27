@@ -9,9 +9,9 @@ It basically takes a field with a decimal value between 0 and 1 and shows it as 
 
 It edits like a text field.
 
-<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot-index.png" alt="index example">
-<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot-detail.png" alt="detail example">
-<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot-form.png" alt="form example">
+<img src="https://github.com/signifly/nova-progressbar-field/blob/master/img/screenshot-index.png" alt="index example">
+<img src="https://github.com/signifly/nova-progressbar-field/blob/master/img/screenshot-detail.png" alt="detail example">
+<img src="https://github.com/signifly/nova-progressbar-field/blob/master/img/screenshot-form.png" alt="form example">
 
 #### DISCLAIMER: 
 This package is still work in progress. Feel free to help improve it.
