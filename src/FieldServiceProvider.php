@@ -1,6 +1,6 @@
 <?php
 
-namespace Signifly\Nova\Cards\ProgressBar;
+namespace Signifly\Nova\Fields\ProgressBar;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;

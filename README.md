@@ -1,1 +1,116 @@
-# nova-progressbar-field
+# Nova ProgressBar Field
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/signifly/nova-progressbar-field.svg?style=flat-square)](https://packagist.org/packages/signifly/nova-progressbar-field)
+[![Total Downloads](https://img.shields.io/packagist/dt/signifly/nova-progressbar-field.svg?style=flat-square)](https://packagist.org/packages/signifly/nova-progressbar-field)
+[![License](https://poser.pugx.org/signifly/nova-progressbar-field/license)](https://packagist.org/packages/signifly/nova-progressbar-field)
+
+This package allows you to add progressbar fields to your resources and dashboards in [Nova](https://nova.laravel.com).
+
+<img src="https://github.com/signifly/nova-progressbar-field/blob/master/screenshot.png" alt="Example">
+
+#### DISCLAIMER: 
+This package is still work in progress. Feel free to help improve it.
+
+
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Basic Usage](#basic-usage)
+* [Advanced Options](#advanced-options)
+
+___
+## Requirements
+* [Laravel v5.8.*](https://laravel.com/docs/5.8)
+* [Laravel Nova v2.*](https://nova.laravel.com/docs/2.0/)
+
+___
+## Installation
+Just run:  
+```bash
+composer require Signifly/nova-progressbar-card
+```
+After this the setup will be complete and you can use the components listed here.
+
+___
+## Basic Usage
+```php
+// in App\Nova\Product
+...
+use signifly\Nova\Fields\ProgressBar\ProgressBar;
+...
+
+/**
+ * Get the fields available for the request.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @return array
+ */
+public function fields(Request $request)
+{
+    return [
+        (new ProgressBar)->options(['title' => 'Translations', 'percentage' => 0.5]);
+    ];
+}
+
+```
+
+___ 
+## Advanced Options
+
+### Custom color
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'color' => '#123456',
+        ]);
+    ];
+}
+```
+
+### Animate Bar Color A -> B
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'colorFrom' => '#aaa',
+            'colorTo' => '#bbb',
+            'animateColor' => true,
+        ]);
+    ];
+}
+```
+
+### Stroke Width
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'strokeWidth' => 8,
+        ]);
+    ];
+}
+```
+
+### Semi Circle Type Progress Bar
+```php
+public function cards(Request $request)
+{
+    return [
+        (new ProgressBar)->options([
+            'title' => 'Translations',
+            'percentage' => 0.5,
+            'type' => 'semi-circle',
+        ]);
+    ];
+}
+```
+
+Feel free to come with suggestions for improvements.
