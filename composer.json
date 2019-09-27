@@ -5,7 +5,7 @@
         "laravel",
         "nova",
         "progressbar",
-        "fields",
+        "fields"
     ],
     "license": "MIT",
     "authors": [{
