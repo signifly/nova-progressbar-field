@@ -979,7 +979,6 @@ var ProgressBar = __webpack_require__(3);
   },
 
   mounted: function mounted() {
-    console.log("crap");
     for (var key in this.field.options) {
       if (this.field.options.hasOwnProperty(key)) {
         this.options[key] = this.field.options[key];
@@ -2883,7 +2882,6 @@ var ProgressBar = __webpack_require__(3);
   },
 
   mounted: function mounted() {
-    console.log("crap");
     for (var key in this.field.options) {
       if (this.field.options.hasOwnProperty(key)) {
         this.options[key] = this.field.options[key];
