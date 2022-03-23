@@ -42,7 +42,7 @@ ___
 ```php
 // in App\Nova\User
 ...
-use signifly\Nova\Fields\ProgressBar\ProgressBar;
+use Signifly\Nova\Fields\ProgressBar\ProgressBar;
 ...
 
 /**
